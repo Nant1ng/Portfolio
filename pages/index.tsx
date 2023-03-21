@@ -1,7 +1,5 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
@@ -10,7 +8,9 @@ export default function Home() {
         <title>Andrés Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div></div>
+      <div>
+        <Header />
+      </div>
     </>
   );
 }
