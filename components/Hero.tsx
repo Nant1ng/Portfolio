@@ -19,7 +19,7 @@ function Hero() {
       <BackgroundCircles />
       <Image
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src="https://media.licdn.com/dms/image/D4D03AQF2aLJ-SEcs2A/profile-displayphoto-shrink_100_100/0/1675947027228?e=1684972800&v=beta&t=6Fn5FdJ-Nmb-H9ey9Hc1PjBjAd407XCf7i22LwZ3t-U"
+        src="https://avatars.githubusercontent.com/u/43606751?v=4"
         alt="Andrés Profile Picture"
         width={100}
         height={100}
