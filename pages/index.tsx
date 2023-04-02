@@ -14,7 +14,7 @@ export default function Home() {
         <title>Andrés Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
+      <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#6b0a7f]/30">
         <Header />
         <section id="hero" className="snap-start">
           <Hero />

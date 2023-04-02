@@ -22,19 +22,17 @@ function Header() {
           bgColor="transparent"
         />
       </motion.div>
-      <Link href="#contact">
-        <motion.div
-          initial={{ x: 500, opacity: 0, scale: 0.5 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="flex flex-row items-center text-gray-300"
-        >
-          <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-          <p className="hidden md:inline-flex text-sm text-gray-400">
-            Get In Touch
-          </p>
-        </motion.div>
-      </Link>
+      <motion.div
+        initial={{ x: 500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-row items-center text-gray-300"
+      >
+        <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
+        <p className="hidden md:inline-flex text-sm text-gray-400">
+          Get In Touch
+        </p>
+      </motion.div>
     </header>
   );
 }
