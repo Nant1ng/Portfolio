@@ -28,10 +28,17 @@ function Header() {
         transition={{ duration: 1.5 }}
         className="flex flex-row items-center text-gray-300"
       >
-        <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-        <p className="hidden md:inline-flex text-sm text-gray-400">
-          Get In Touch
-        </p>
+        <SocialIcon
+          url="#contact"
+          network="email"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+        <Link href="#contact">
+          <p className="hidden md:inline-flex text-sm text-gray-400">
+            Get In Touch
+          </p>
+        </Link>
       </motion.div>
     </header>
   );
