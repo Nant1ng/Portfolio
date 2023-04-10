@@ -24,13 +24,13 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'backgroundInormation',
+      name: 'backgroundInformation',
       title: 'BackgroundInformation',
       type: 'string',
     }),
     defineField({
       name: 'profilePic',
-      title: 'ProfolePic',
+      title: 'ProfilePic',
       type: 'image',
       options: {
         hotspot: true,
