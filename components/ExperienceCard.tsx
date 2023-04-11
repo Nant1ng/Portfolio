@@ -8,12 +8,12 @@ function ExperienceCard() {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-32 h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
         src="https://lh5.googleusercontent.com/-HgBJfUjXWkE/AAAAAAAAAAI/AAAAAAAAAAA/YnLNWiAuIjQ/s44-p-k-no-ns-nd/photo.jpg"
         alt="Redeye AB"
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">Junior Fullstack Developer</h4>
+        <h4 className="text-2xl md:text-4xl font-light">Junior Fullstack Developer</h4>
         <p className="font-bold text-2xl mt-1">Redeye AB</p>
         <div className="flex space-x-2 my-2">
           <img
