@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
+import { Experience } from "@/typings";
 
-function Experience() {
+type Props = {
+  experiences: Experience[];
+};
+
+function Experience({ experiences }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,10 +18,9 @@ function Experience() {
         Experience
       </h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#6b0a7f]/30">
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
+        {experiences.map((experience) => (
+          <ExperienceCard key={experience._id} experience={experience} />
+        ))}
       </div>
     </motion.div>
   );
