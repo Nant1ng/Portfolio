@@ -1,6 +1,13 @@
+import { urlFor } from "@/sanity";
+import { PageInfo } from "@/typings";
 import { motion } from "framer-motion";
 
-function About() {
+type Props = {
+  pageInfo: PageInfo;
+};
+
+function About({ pageInfo }: Props) {
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,7 +23,7 @@ function About() {
         transition={{ duration: 1.2 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        src="/aboutImg.jpg"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-28 h-28 md:56 md:56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[400px] xl:h-[500px]"
       />
       <div className="space-y-3 md:space-y-10 px-0 md:px-10">
@@ -25,15 +32,7 @@ function About() {
           <span className="underline decoration-[#6b0a7f]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-sm">
-          I'm Andrés, I enjoy the challenge of learning new things and find it
-          easy to work independently as well as collaborate in a group.
-          Otherwise, I am a positive, calm person who likes to exercise. In my
-          spare time I like to meet friends, go to the gym and have everything
-          in food as a passion. I also do various hobby projects to improve my
-          skills in the languages ​​I already know and to try new languages, CMS
-          and technologies for fun.
-        </p>
+        <p className="text-sm">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
