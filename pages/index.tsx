@@ -34,7 +34,6 @@ export default function Home({
   projects,
   socials,
 }: Props) {
-
   return (
     <>
       <Head>
@@ -50,10 +49,10 @@ export default function Home({
           <About pageInfo={pageInfo} />
         </section>
         <section id="experience" className="snap-center">
-          <WorkExperience experiences={experiences}/>
+          <WorkExperience experiences={experiences} />
         </section>
         <section id="skills" className="snap-start">
-          <Skills />
+          <Skills skills={skills} />
         </section>
         <section id="projects" className="snap-start">
           <Projects />
