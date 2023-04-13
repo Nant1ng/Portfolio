@@ -58,7 +58,7 @@ export default function Home({
           <Projects />
         </section>
         <section id="contact" className="snap-start">
-          <ContactMe />
+          <ContactMe socials={pageInfo} />
         </section>
         <Link href="#hero">
           <footer className="sticky bottom-5 w-full cursor-pointer">
