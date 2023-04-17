@@ -2,6 +2,7 @@ import { urlFor } from "@/sanity";
 import { Project } from "@/typings";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   projects: Project[];
@@ -45,11 +46,22 @@ function Projects({ projects }: Props) {
                     alt={technology.title}
                     width={40}
                     height={40}
+                    className="rounded-full"
                   />
                 ))}
               </div>
               <p className="text-lg text-center md:text-left">
                 {project?.summary}
+              </p>
+              <p className="text-lg text-center md:text-left">
+                Link:{" "}
+                <Link
+                  href={project?.linkToBuild}
+                  target="_blank"
+                  className="underline decoration-[#6b0a7f]"
+                >
+                  {project?.linkToBuild}
+                </Link>
               </p>
             </div>
           </div>

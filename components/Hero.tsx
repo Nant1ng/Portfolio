@@ -14,7 +14,7 @@ function Hero({ pageInfo }: Props) {
     words: [
       `Hi, The Name's ${pageInfo?.name}`,
       "Guy-who-loves-to-workout.tsx",
-      "<ButLovesToCodeMore />",
+      "<But-Loves-To-Code-More />",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -48,7 +48,7 @@ function Hero({ pageInfo }: Props) {
           <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
-          <Link href="projects">
+          <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
         </div>
