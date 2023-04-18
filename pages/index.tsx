@@ -11,11 +11,11 @@ import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
 
 import { Experience, PageInfo, Project, Skill, Social } from "@/typings";
-import { fetchPageInfo } from "@/utils/fetchPageInfo";
-import { fetchExperiences } from "@/utils/fetchExperiences";
-import { fetchSkills } from "@/utils/fetchSkills";
-import { fetchProjects } from "@/utils/fetchProjects";
-import { fetchSocials } from "@/utils/fetchSocials";
+import { fetchPageInfo } from "@/lib/fetchPageInfo";
+import { fetchExperiences } from "@/lib/fetchExperiences";
+import { fetchSkills } from "@/lib/fetchSkills";
+import { fetchProjects } from "@/lib/fetchProjects";
+import { fetchSocials } from "@/lib/fetchSocials";
 
 import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
 
