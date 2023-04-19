@@ -29,6 +29,7 @@ function Hero({ pageInfo }: Props) {
         alt={`${pageInfo?.name} profile pic`}
         width={100}
         height={100}
+        priority
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px]">
