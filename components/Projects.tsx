@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {
+/* type Props = {
   projects: Project[];
-};
+}; */
 
-function Projects({ projects }: Props) {
+function Projects(/* { projects }: Props */) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ function Projects({ projects }: Props) {
         Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#6b0a7f]/30">
-        {projects?.map((project, i) => (
+        {/* {projects?.map((project, i) => (
           <div
             key={project._id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
@@ -68,7 +68,7 @@ function Projects({ projects }: Props) {
               </p>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
       <div className="w-full absolute top-[30%] bg-[#6b0a7f]/10 left-0 h-[500px] -skew-y-12" />
     </motion.div>
