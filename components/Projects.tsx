@@ -32,10 +32,10 @@ function Projects({ projects }: Props) {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt={project?.title}
-              className="w-96"
+              className="w-52 xl:w-96"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-2xl font-semibold text-center">
+              <h4 className="text-lg xl:text-2xl font-semibold text-center">
                 <span className="underline decoration-[#6b0a7f]/50">
                   Projects {i + 1} of {projects?.length}:
                 </span>{" "}
@@ -53,10 +53,10 @@ function Projects({ projects }: Props) {
                   />
                 ))}
               </div>
-              <p className="text-lg text-center md:text-left">
+              <p className="text-sm xl:text-lg text-center md:text-left">
                 {project?.summary}
               </p>
-              <p className="text-lg text-center md:text-left">
+              <p className="text-sm xl:text-lg text-center md:text-left">
                 Link:{" "}
                 <Link
                   href={project?.linkToBuild}
