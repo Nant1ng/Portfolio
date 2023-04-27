@@ -22,6 +22,7 @@ function Header({ socials }: Props) {
             url={social.url}
             fgColor="gray"
             bgColor="transparent"
+            target="_blank"
           />
         ))}
       </motion.div>
