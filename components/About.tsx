@@ -31,7 +31,9 @@ function About({ pageInfo }: Props) {
           <span className="underline decoration-[#6b0a7f]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-sm">{pageInfo?.backgroundInformation}</p>
+        <p className="text-sm overflow-y-auto h-56 md:h-full pr-2 md:pr-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#6b0a7f]/30">
+          {pageInfo?.backgroundInformation}
+        </p>
       </div>
     </motion.div>
   );
