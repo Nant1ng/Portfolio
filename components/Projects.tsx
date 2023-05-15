@@ -9,6 +9,7 @@ type Props = {
 };
 
 function Projects({ projects }: Props) {
+  console.log(projects);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,7 +24,7 @@ function Projects({ projects }: Props) {
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-1 items-center justify-center p-20 md:p-44 h-screen"
           >
             <Link href={project?.linkToBuild} target="_blank">
               <motion.img
@@ -36,6 +37,11 @@ function Projects({ projects }: Props) {
                 className="w-52 md:w-96"
               />
             </Link>
+            {projects.isCurrentlyWorkingOn ? (
+              <h4 className="text-center text-sm text-gray-400">
+                I'm currently working on this project.
+              </h4>
+            ) : null}
             <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-lg xl:text-2xl font-semibold text-center">
                 <span className="underline decoration-[#6b0a7f]/50">

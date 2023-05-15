@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'pageInfo',
-  title: 'PageInfo',
+  title: 'Page Info',
   type: 'document',
   fields: [
     defineField({
@@ -25,12 +25,12 @@ export default defineType({
     }),
     defineField({
       name: 'backgroundInformation',
-      title: 'BackgroundInformation',
+      title: 'Background information',
       type: 'string',
     }),
     defineField({
       name: 'profilePic',
-      title: 'ProfilePic',
+      title: 'Profile pic',
       type: 'image',
       options: {
         hotspot: true,
@@ -38,7 +38,7 @@ export default defineType({
     }),
     defineField({
       name: 'phoneNumber',
-      title: 'PhoneNumber',
+      title: 'Phone number',
       type: 'string',
     }),
     defineField({

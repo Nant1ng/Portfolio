@@ -7,12 +7,12 @@ export default defineType({
   fields: [
     defineField({
       name: 'jobTitle',
-      title: 'JobTitle',
+      title: 'Job title',
       type: 'string',
     }),
     defineField({
       name: 'companyImage',
-      title: 'CompanyImage',
+      title: 'Company image',
       type: 'image',
       options: {
         hotspot: true,
@@ -25,17 +25,17 @@ export default defineType({
     }),
     defineField({
       name: 'dateStarted',
-      title: 'DateStarted',
+      title: 'Date started',
       type: 'date',
     }),
     defineField({
       name: 'dateEnded',
-      title: 'DateEnded',
+      title: 'Date ended',
       type: 'date',
     }),
     defineField({
       name: 'isCurrentlyWorkingHere',
-      title: 'IsCurrentlyWorkingHere',
+      title: 'Is currently working here',
       type: 'boolean',
     }),
     defineField({

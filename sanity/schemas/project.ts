@@ -12,6 +12,11 @@ export default defineType({
       description: 'Title of the project',
     }),
     defineField({
+      name: 'isCurrentlyWorkingOn',
+      title: 'Is currently working on',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -32,7 +37,7 @@ export default defineType({
     }),
     defineField({
       name: 'linkToBuild',
-      title: 'LinkToBuild',
+      title: 'Link to build',
       type: 'url',
     }),
   ],
