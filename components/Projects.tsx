@@ -37,9 +37,9 @@ function Projects({ projects }: Props) {
                 className="w-52 md:w-96"
               />
             </Link>
-            {projects.isCurrentlyWorkingOn ? (
+            {!projects.isCurrentlyWorkingOn ? (
               <h4 className="text-center text-sm text-gray-400">
-                I'm currently working on this project.
+                I&apos;m currently working on this project.
               </h4>
             ) : null}
             <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
