@@ -9,7 +9,6 @@ type Props = {
 };
 
 function Projects({ projects }: Props) {
-  console.log(projects);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -37,7 +36,7 @@ function Projects({ projects }: Props) {
                 className="w-52 md:w-96"
               />
             </Link>
-            {!projects.isCurrentlyWorkingOn ? (
+            {project.isCurrentlyWorkingOn ? (
               <h4 className="text-center text-sm text-gray-400">
                 I&apos;m currently working on this project.
               </h4>
