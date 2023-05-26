@@ -33,7 +33,7 @@ function Projects({ projects }: Props) {
                 viewport={{ once: true }}
                 src={urlFor(project?.image).url()}
                 alt={project?.title}
-                className="w-52 md:w-96"
+                className="w-52 md:w-72"
               />
             </Link>
             {project.isCurrentlyWorkingOn ? (
