@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ["cdn.sanity.io"],
   },
+  compiler: {
+    reactStrictMode: true,
+    styledComponents: true,
+  },
 };
 
 module.exports = nextConfig;
