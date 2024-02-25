@@ -1,36 +1,100 @@
 import { PageInfo } from "@/typings";
+
+import styled from "styled-components";
+
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { TABLET_BP } from "@/utils/breakpoints";
 
 type Props = {
   socials: PageInfo;
 };
 
+const ContactContainer = styled.div`
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  max-width: 80rem;
+  padding: 2.5rem;
+  justify-content: space-evenly;
+  margin: auto;
+  align-items: center;
+  ${TABLET_BP} {
+    flex-direction: row;
+    text-align: left;
+  }
+`;
+
+const Heading = styled.h3`
+  position: absolute;
+  top: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 17.5px;
+  color: #6b7280;
+  font-size: 1.5rem;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+`;
+
+const ContactHeading = styled.h4`
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+`;
+
+const HighlightText = styled.span`
+  text-decoration: underline;
+  text-decoration-color: #6b0a7f;
+`;
+
+const SpaceYContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+`;
+
+const CenterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+`;
+
+const ContactParagraph = styled.p`
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+`;
+
 function ContactMe({ socials }: Props) {
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[17.5px] text-gray-500 text-2xl">
-        Contact
-      </h3>
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+    <ContactContainer>
+      <Heading>Contact</Heading>
+      <FlexContainer>
+        <ContactHeading>
           If you have any questions or just want to get to know me better, feel
-          free to{" "}
-          <span className="underline decoration-[#6b0a7f]/50">
-            call or email me!
-          </span>
-        </h4>
-        <div className="space-y-10">
-          <div className="flex items-center space-x-5 justify-center">
+          free to <HighlightText>call or email me!</HighlightText>
+        </ContactHeading>
+        <SpaceYContainer>
+          <CenterContainer>
             <PhoneIcon className="text-[#6b0a7f] h-7 w-7 animate-pulse" />
-            <p className="text-xl">{socials.phoneNumber}</p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
+            <ContactParagraph>{socials?.phoneNumber}</ContactParagraph>
+          </CenterContainer>
+          <CenterContainer>
             <EnvelopeIcon className="text-[#6b0a7f] h-7 w-7 animate-pulse" />
-            <p className="text-xl">{socials.email}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+            {/*Hans */}
+            <a href={`mailto:${socials?.email}`}>
+              <ContactParagraph>{socials?.email}</ContactParagraph>
+            </a>
+          </CenterContainer>
+        </SpaceYContainer>
+      </FlexContainer>
+    </ContactContainer>
   );
 }
 
