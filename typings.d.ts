@@ -59,4 +59,5 @@ export interface Social extends SanityBody {
   url: string;
 }
 
-export interface SnapScrollProps extends HTMLAttributes<HTMLElement> {}
+// Hans
+//export interface ScrollSnapProps extends HTMLAttributes<HTMLElement> {}
