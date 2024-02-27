@@ -18,6 +18,7 @@ function Skill({ directionLeft, skill }: Props) {
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
         src={urlFor(skill?.image).url()}
+        alt={skill?.title}
         className="hidden md:block rounded-full border border-gray-500 object-cover h-12 w-12 md:w-20 md:h-20 2xl:w-24 2xl:h-24 filter group-hover:grayscale transition duration-300 ease-in-out"
       />
       <motion.img
@@ -28,6 +29,7 @@ function Skill({ directionLeft, skill }: Props) {
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
         src={urlFor(skill?.image).url()}
+        alt={skill?.title}
         className="md:hidden rounded-full border border-gray-500 object-cover h-12 w-12 filter group-hover:grayscale transition duration-300 ease-in-out"
       />
       <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-12 w-12 md:w-20 md:h-20 rounded-full">

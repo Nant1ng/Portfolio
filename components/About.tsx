@@ -85,6 +85,7 @@ function About({ pageInfo }: Props) {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         src={urlFor(pageInfo?.profilePic).url()}
+        alt="Image of Andrés"
         className="-mb-20 md:mb-0 flex-shrink-0 w-28 h-28 md:56 md:56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[400px] xl:h-[500px]"
       />
       <BackgroundContainer>

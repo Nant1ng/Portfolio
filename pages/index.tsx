@@ -99,7 +99,7 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Andrés' Portfolio - showcasing projects, skills, and professional experiences."
+          content="Andrés Portfolio - showcasing projects, skills, and professional experiences."
         />
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#2F2F2F" />
