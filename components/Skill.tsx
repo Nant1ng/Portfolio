@@ -1,11 +1,58 @@
 import { urlFor } from "@/sanity";
-import { Skill } from "@/typings";
 import { motion } from "framer-motion";
+
+import styled from "styled-components";
+
+import { Skill } from "@/typings";
+import { TABLET_BP, XL_DESKTOP_BP } from "@/utils/breakpoints";
 
 type Props = {
   directionLeft?: boolean;
   skill: Skill;
 };
+
+const SkillProgress = styled.div`
+  position: absolute;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  .group:hover & {
+    opacity: 0.8;
+    background-color: white;
+  }
+  ${TABLET_BP} {
+    height: 5rem;
+    width: 5rem;
+  }
+  ${XL_DESKTOP_BP} {
+    height: 6rem;
+    width: 6rem;
+  }
+`;
+
+const Center = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+`;
+
+const ProgressText = styled.p`
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: rgb(0 0 0);
+  ${TABLET_BP} {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  ${XL_DESKTOP_BP} {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+`;
 
 function Skill({ directionLeft, skill }: Props) {
   return (
@@ -32,13 +79,13 @@ function Skill({ directionLeft, skill }: Props) {
         alt={skill?.title}
         className="md:hidden rounded-full border border-gray-500 object-cover h-12 w-12 filter group-hover:grayscale transition duration-300 ease-in-out"
       />
-      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-12 w-12 md:w-20 md:h-20 rounded-full">
-        <div className="flex items-center justify-center h-full">
-          <p className="text-xl md:text-3xl 2xl:text-4xl font-bold text-black opacity-100">
+      <SkillProgress>
+        <Center>
+          <ProgressText>
             {skill?.progress}%
-          </p>
-        </div>
-      </div>
+          </ProgressText>
+        </Center>
+      </SkillProgress>
     </div>
   );
 }
