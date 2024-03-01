@@ -87,10 +87,9 @@ function ContactMe({ socials }: Props) {
           </CenterContainer>
           <CenterContainer>
             <EnvelopeIcon className="text-[#6b0a7f] h-7 w-7 animate-pulse" />
-            {/*Hans */}
-            <a href={`mailto:${socials?.email}`}>
+           
               <ContactParagraph>{socials?.email}</ContactParagraph>
-            </a>
+           
           </CenterContainer>
         </SpaceYContainer>
       </FlexContainer>
