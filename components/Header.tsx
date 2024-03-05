@@ -66,7 +66,7 @@ function Header({ socials }: Props) {
           fgColor="currentColor"
           bgColor="transparent"
         />
-        <Link href="#contact">
+        <Link href="#contact" aria-label="Get in touch - Go to contact section">
           <ContactBtn>Get In Touch</ContactBtn>
         </Link>
       </motion.div>
