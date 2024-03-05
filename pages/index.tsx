@@ -87,12 +87,6 @@ export default function Home({
 }: Props) {
   return (
     <>
-      {/*
-        Hans 
-        Twitter/X, Open Graph 
-        Bra, Dåligt
-        ????  
-      */}
       <Head>
         <title>Andrés Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -103,6 +97,35 @@ export default function Home({
         />
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#2F2F2F" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Andrés Portfolio" />
+        <meta
+          property="og:description"
+          content="Explore Andrés' professional journey, skills, and projects."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://portfolio-nant1ng.vercel.app/"
+        />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/path-to-your-image.jpg"
+        />
+        <meta property="og:site_name" content="Andrés Portfolio" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@yourTwitterHandle" />
+        <meta name="twitter:title" content="Andrés Portfolio" />
+        <meta
+          name="twitter:description"
+          content="Explore Andrés' professional journey, skills, and projects."
+        />
+        <meta
+          name="twitter:image"
+          content="https://yourwebsite.com/path-to-your-image.jpg"
+        />
+        <meta name="twitter:site" content="@yourTwitterHandle" />
       </Head>
       <Container>
         <Header socials={socials} />
@@ -124,7 +147,7 @@ export default function Home({
         <SnapStart id="contact">
           <ContactMe socials={pageInfo} />
         </SnapStart>
-        <Link href="#hero">
+        <Link href="#hero" aria-label="Return to homepage section">
           <Footer>
             <ArrowUpContainer>
               <ArrowUpCircleIcon className="h-10 w-10 text-[#6b0a7f] filter grayscale-[75%] hover:grayscale-0 cursor-pointer" />
