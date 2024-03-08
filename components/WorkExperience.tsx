@@ -1,10 +1,41 @@
 import { motion } from "framer-motion";
+import styled from "styled-components";
 import ExperienceCard from "./ExperienceCard";
 import { Experience } from "@/typings";
 
 type Props = {
   experiences: Experience[];
 };
+
+const ExperienceHeading = styled.h3`
+  position: absolute;
+  top: 3.75rem;
+  text-transform: uppercase;
+  letter-spacing: 17.5px;
+  color: rgb(107 114 128);
+  font-size: 1.5rem;
+  line-height: 2rem;
+`;
+
+const ExperienceContainer = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: scroll;
+  padding: 2.5rem;
+  scroll-snap-type: x mandatory;
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(156, 163, 175, 0.2);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(107, 10, 127, 0.3);
+    border-radius: 4px;
+  }
+  scrollbar-color: rgba(107, 10, 127, 0.3) rgba(156, 163, 175, 0.2);
+`;
 
 function Experience({ experiences }: Props) {
   return (
@@ -14,14 +45,12 @@ function Experience({ experiences }: Props) {
       transition={{ duration: 1.5 }}
       className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-[60px] uppercase tracking-[17.5px] text-gray-500 text-2xl">
-        Experience
-      </h3>
-      <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#6b0a7f]/30">
+      <ExperienceHeading>Experience</ExperienceHeading>
+      <ExperienceContainer>
         {experiences.map((experience) => (
           <ExperienceCard key={experience._id} experience={experience} />
         ))}
-      </div>
+      </ExperienceContainer>
     </motion.div>
   );
 }
